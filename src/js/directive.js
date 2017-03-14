@@ -18,6 +18,7 @@
 			bubbles     :   true,
 			imgBubbles  :   false,   
 			bgClose     :   false,
+			closeButton :   true,
 			imgAnim 	: 	'fadeup',
 		};
 
@@ -46,6 +47,7 @@
 				bubbles 		: 	'=?',		// true|flase
 				imgBubbles 		: 	'=?',		// true|flase
 				bgClose 		: 	'=?',		// true|flase
+				closeButton : 	'=?',		// true|flase
 				imgAnim 		: 	'@?',		// {name}
 
 				onOpen 			: 	'&?',		// function
@@ -77,7 +79,7 @@
 										'<a class="ext-url" ng-repeat="image in images track by $index" ng-if="activeImg == image && image.extUrl" ng-href="" ng-click="openPage(image.extUrl)"></a>'+
 
 										// Close Icon (hidden in inline gallery)
-										'<div class="close" ng-click="methods.close();" ng-if="!inline"></div>'+
+										'<div class="close" ng-click="methods.close();" ng-if="!inline && !closeButton"></div>'+
 									'</div>'+
 
 									// Prev-Next Icons
@@ -212,6 +214,7 @@
 					scope.imgBubbles 	 = 	(conf.imgBubbles 	!= undefined) ? conf.imgBubbles 	: 	(scope.imgBubbles 	!= undefined) 	?  scope.imgBubbles		: 	ngImageGalleryOpts.imgBubbles;
 					scope.bgClose 	 	 = 	(conf.bgClose 		!= undefined) ? conf.bgClose 	 	: 	(scope.bgClose 		!= undefined) 	?  scope.bgClose		: 	ngImageGalleryOpts.bgClose;
 					scope.imgAnim 	 	 = 	(conf.imgAnim 		!= undefined) ? conf.imgAnim 	 	: 	(scope.imgAnim 		!= undefined) 	?  scope.imgAnim		: 	ngImageGalleryOpts.imgAnim;
+					scope.closeButton 	 	 = 	(conf.closeButton 		!= undefined) ? conf.closeButton 	 	: 	(scope.closeButton 		!= undefined) 	?  scope.closeButton		: 	ngImageGalleryOpts.closeButton;
 				});
 
 				scope.onOpen 	 	 = 	(scope.onOpen 		!= undefined) ? scope.onOpen 	 : 	angular.noop;
