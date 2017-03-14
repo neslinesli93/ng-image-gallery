@@ -30,8 +30,8 @@
 			}
 		}
 	})
-	.directive('ngImageGallery', ['$rootScope', '$timeout', '$q', 'ngImageGalleryOpts',
-	function($rootScope, $timeout, $q, ngImageGalleryOpts){
+	.directive('ngImageGallery', ['$rootScope', '$timeout', '$q', '$window', 'ngImageGalleryOpts',
+	function($rootScope, $timeout, $q, $window, ngImageGalleryOpts){
 		return {
 			replace : true,
 			transclude : false,
@@ -74,7 +74,7 @@
 									// destroy icons container
 									'<div class="destroy-icons-container">'+
 										// External link icon
-										'<a class="ext-url" ng-repeat="image in images track by $index" ng-if="activeImg == image && image.extUrl" href="{{image.extUrl}}"></a>'+
+										'<a class="ext-url" ng-repeat="image in images track by $index" ng-if="activeImg == image && image.extUrl" ng-click="$window.open(image.extUrl, \'_blank\')"></a>'+
 
 										// Close Icon (hidden in inline gallery)
 										'<div class="close" ng-click="methods.close();" ng-if="!inline"></div>'+
