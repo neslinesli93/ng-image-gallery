@@ -19,6 +19,7 @@
 			imgBubbles  :   false,   
 			bgClose     :   false,
 			closeButton :   true,
+			preventRightClick: true,
 			imgAnim 	: 	'fadeup',
 		};
 
@@ -43,11 +44,12 @@
 				conf 			: 	'=?',		// {}
 
 				thumbnails 		: 	'=?',		// true|false
-				inline 			: 	'=?',		// true|flase
-				bubbles 		: 	'=?',		// true|flase
-				imgBubbles 		: 	'=?',		// true|flase
-				bgClose 		: 	'=?',		// true|flase
-				closeButton : 	'=?',		// true|flase
+				inline 			: 	'=?',		// true|false
+				bubbles 		: 	'=?',		// true|false
+				imgBubbles 		: 	'=?',		// true|false
+				bgClose 		: 	'=?',		// true|false
+				closeButton : 	'=?',		// true|false,
+				preventRightClick : 	'=?',		// true|false,
 				imgAnim 		: 	'@?',		// {name}
 
 				onOpen 			: 	'&?',		// function
@@ -92,7 +94,7 @@
 										
 										// Images container
 										'<div class="galleria-images img-anim-{{imgAnim}} img-move-dir-{{imgMoveDirection}}">'+
-											'<img class="galleria-image" ng-repeat="image in images track by $index" ng-if="activeImg == image" ng-src="{{image.url}}" ondragstart="return false;" oncontextmenu="return false;" ng-attr-title="{{image.title || undefined}}" ng-attr-alt="{{image.alt || undefined}}"/>'+
+											'<img class="galleria-image" ng-repeat="image in images track by $index" ng-if="activeImg == image" ng-src="{{image.url}}" ondragstart="return false;" oncontextmenu="return preventRightClick;" ng-attr-title="{{image.title || undefined}}" ng-attr-alt="{{image.alt || undefined}}"/>'+
 										'</div>'+
 
 										// Bubble navigation container
@@ -215,6 +217,7 @@
 					scope.bgClose 	 	 = 	(conf.bgClose 		!= undefined) ? conf.bgClose 	 	: 	(scope.bgClose 		!= undefined) 	?  scope.bgClose		: 	ngImageGalleryOpts.bgClose;
 					scope.imgAnim 	 	 = 	(conf.imgAnim 		!= undefined) ? conf.imgAnim 	 	: 	(scope.imgAnim 		!= undefined) 	?  scope.imgAnim		: 	ngImageGalleryOpts.imgAnim;
 					scope.closeButton 	 	 = 	(conf.closeButton 		!= undefined) ? conf.closeButton 	 	: 	(scope.closeButton 		!= undefined) 	?  scope.closeButton		: 	ngImageGalleryOpts.closeButton;
+					scope.preventRightClick 	 	 = 	(conf.preventRightClick 		!= undefined) ? conf.preventRightClick 	 	: 	(scope.preventRightClick 		!= undefined) 	?  scope.preventRightClick		: 	ngImageGalleryOpts.preventRightClick;
 				});
 
 				scope.onOpen 	 	 = 	(scope.onOpen 		!= undefined) ? scope.onOpen 	 : 	angular.noop;
