@@ -110,6 +110,11 @@
 											'<img class="galleria-image" ng-right-click ng-repeat="image in images track by $index" ng-if="activeImg == image" ng-src="{{image.url}}" ondragstart="return false;" ng-attr-title="{{image.title || undefined}}" ng-attr-alt="{{image.alt || undefined}}"/>'+
 										'</div>'+
 
+										// Description container
+										'<div class="galleria-bubbles" ng-if="activeImg.title">'+
+											'<span class="galleria-description">{{activeImg.title || "Lorem Ipsum Dolor Sit Amet"}}</span>'+
+										'</div>'+
+
 										// Bubble navigation container
 										'<div class="galleria-bubbles" ng-if="bubbles && !imgBubbles"  ng-hide="images.length == 1">'+
 											'<span class="galleria-bubble" ng-click="setActiveImg(image);" ng-repeat="image in images track by $index" ng-class="{active : (activeImg == image)}"></span>'+

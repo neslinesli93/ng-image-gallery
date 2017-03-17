@@ -453,11 +453,10 @@
             margin: 2px 4px;
             cursor: pointer;
             overflow: hidden;
-            border-radius: 100%;
             background-size: cover;
             background-position: center center;
             vertical-align: middle; }
-            .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span:not(.img-bubble) {
+            .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span:not(.img-bubble):not(.galleria-description) {
               width: 12px;
               height: 12px;
               background-color: rgba(255, 255, 255, 0.5);
@@ -465,8 +464,10 @@
               overflow: hidden;
               -webkit-transition: all 0.3s ease-in-out;
               transition: all 0.3s ease-in-out; }
-              .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span:not(.img-bubble).active {
+              .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span:not(.img-bubble):not(.galleria-description).active {
                 background-color: #fff; }
+            .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span.galleria-description {
+              color: rgba(255, 255, 255, 0.5); }
             .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span.img-bubble {
               box-sizing: border-box;
               width: 12px;

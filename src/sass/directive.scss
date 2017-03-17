@@ -401,12 +401,11 @@
 						margin:2px 4px;
 						cursor: pointer;
 						overflow: hidden;
-						border-radius: 100%;
 						background-size: cover;
 						background-position: center center;
 						vertical-align: middle;
 
-						&:not(.img-bubble){
+						&:not(.img-bubble):not(.galleria-description){
 							width:12px;
 							height:12px;
 							background-color : rgba(255,255,255,0.5);
@@ -417,6 +416,10 @@
 							&.active{
 								background-color : #fff;
 							}
+						}
+
+						&.galleria-description {
+							color: rgba(255,255,255,0.5);
 						}
 
 						&.img-bubble{
