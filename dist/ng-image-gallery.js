@@ -330,10 +330,12 @@
 					scope.onDelete().then(function() {
 						// Set the new index and image object
 						if (scope.activeImageIndex != 0) {
-							scope.images.splice(activeImageIndex, 1);
-							scope.activeImageIndex = activeImageIndex - 1;
+							scope.images.splice(scope.activeImageIndex, 1);
+							scope.setActiveImg(scope.images[scope.activeImageIndex - 1]);
 						} else {
-							scope.images.splice(activeImageIndex, 1);
+							scope.images.splice(scope.activeImageIndex, 1);
+							scope.setActiveImg(scope.images[0]);
+							
 						}
 					});
 				}
