@@ -87,9 +87,17 @@
 			left:0;
 			z-index: 2;
 
-			.destroy-icons-container{
-				position:absolute;
+			.destroy-icons-container-right {
 				right: 10px;
+			}
+
+			.destroy-icons-container-left {
+				left: 10px;
+			}
+
+			.destroy-icons-container-right,
+			.destroy-icons-container-left{
+				position:absolute;
 				top:20px;
 
 				.ext-url,

@@ -92,16 +92,19 @@
 								'<div class="ng-image-gallery-content" ng-show="!imgLoading" ng-click="backgroundClose($event);">'+
 									
 									// Overlay icons at top-right of the page
-									'<div class="destroy-icons-container">'+
-										// Delete button
-										'<div class="delete" ng-click="methods.delete();" ng-if="!hideDeleteButton"></div>'+
-
+									'<div class="destroy-icons-container-right">'+
 										// External link icon
 										'<a class="ext-url" ng-repeat="image in images track by $index" ng-if="activeImg == image && image.extUrl" ng-href="" ng-click="openPage(image.extUrl)"></a>'+
 
 										// Close Icon (hidden in inline gallery)
 										'<div class="close" ng-click="methods.close();" ng-if="!inline && !hideCloseButton"></div>'+
 
+									'</div>'+
+
+									// Overlay icons at top-left of the page
+									'<div class="destroy-icons-container-left">'+
+										// Delete button
+										'<div class="delete" ng-click="methods.delete();" ng-if="!hideDeleteButton"></div>'+
 									'</div>'+
 
 
@@ -361,7 +364,8 @@
 
 					var noCloseClasses = [
 						'galleria-image',
-						'destroy-icons-container',
+						'destroy-icons-container-right',
+						'destroy-icons-container-left',
 						'ext-url',
 						'close',
 						'delete',

@@ -172,13 +172,20 @@
       bottom: 0;
       left: 0;
       z-index: 2; }
-      .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container {
+      .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right {
+        right: 10px; }
+      .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left {
+        left: 10px; }
+      .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right,
+      .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left {
         position: absolute;
-        right: 10px;
         top: 20px; }
-        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .ext-url,
-        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close,
-        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .delete {
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .ext-url,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .close,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .delete,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .ext-url,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .close,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .delete {
           position: relative;
           display: inline-block;
           width: 40px;
@@ -188,15 +195,21 @@
           text-decoration: none;
           color: #fff;
           vertical-align: bottom; }
-          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .ext-url:hover,
-          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close:hover,
-          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .delete:hover {
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .ext-url:hover,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .close:hover,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .delete:hover,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .ext-url:hover,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .close:hover,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .delete:hover {
             -webkit-transition: background-color 0.3s ease-in-out;
             transition: background-color 0.3s ease-in-out;
             background-color: rgba(255, 255, 255, 0.1); }
-          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .ext-url:before,
-          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close:before,
-          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .delete:before {
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .ext-url:before,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .close:before,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .delete:before,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .ext-url:before,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .close:before,
+          .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .delete:before {
             content: "";
             display: block;
             position: absolute;
@@ -206,11 +219,14 @@
             left: 5px;
             background-size: 100% 100%;
             background-repeat: no-repeat; }
-        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .ext-url:before {
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .ext-url:before,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .ext-url:before {
           background-image: url(../res/icons/external-link.svg); }
-        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .close:before {
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .close:before,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .close:before {
           background-image: url(../res/icons/close.svg); }
-        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container .delete:before {
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .delete:before,
+        .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .delete:before {
           background-image: url(../res/icons/delete.svg); }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .prev,
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .next {
