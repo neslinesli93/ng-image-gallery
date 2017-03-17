@@ -19,6 +19,7 @@
 			imgBubbles  		:   false,   
 			bgClose     		:   false,
 			hideCloseButton :   false,
+			hideDeleteButton :   false,
 			piracy					:   false,
 			imgAnim 				: 	'fadeup',
 		};
@@ -62,11 +63,13 @@
 				imgBubbles 	: 	'=?',		// true|false
 				bgClose 		: 	'=?',		// true|false
 				hideCloseButton : 	'=?',		// true|false,
+				hideDeleteButton : 	'=?',		// true|false,
 				piracy			: 	'=?',		// true|false,
 				imgAnim 		: 	'@?',		// {name}
 
 				onOpen 			: 	'&?',		// function
-				onClose 		: 	'&?'		// function
+				onClose 		: 	'&?',		// function
+				onDelete 		: 	'&?'		// function
 			},
 			template : 	'<div class="ng-image-gallery img-move-dir-{{imgMoveDirection}}" ng-class="{inline:inline}">'+
 							
@@ -95,6 +98,9 @@
 
 										// Close Icon (hidden in inline gallery)
 										'<div class="close" ng-click="methods.close();" ng-if="!inline && !hideCloseButton"></div>'+
+
+										// Delete button
+										'<div class="delete" ng-click="methods.delete();" ng-if="!hideDeleteButton"></div>'+
 									'</div>'+
 
 									// Prev-Next Icons
@@ -236,11 +242,13 @@
 					scope.bgClose 	 	 = 	(conf.bgClose 		!= undefined) ? conf.bgClose 	 	: 	(scope.bgClose 		!= undefined) 	?  scope.bgClose		: 	ngImageGalleryOpts.bgClose;
 					scope.imgAnim 	 	 = 	(conf.imgAnim 		!= undefined) ? conf.imgAnim 	 	: 	(scope.imgAnim 		!= undefined) 	?  scope.imgAnim		: 	ngImageGalleryOpts.imgAnim;
 					scope.hideCloseButton 	 	 = 	(conf.hideCloseButton 		!= undefined) ? conf.hideCloseButton 	 	: 	(scope.hideCloseButton 		!= undefined) 	?  scope.hideCloseButton		: 	ngImageGalleryOpts.hideCloseButton;
+					scope.hideDeleteButton 	 	 = 	(conf.hideDeleteButton 		!= undefined) ? conf.hideDeleteButton 	 	: 	(scope.hideDeleteButton 		!= undefined) 	?  scope.hideDeleteButton		: 	ngImageGalleryOpts.hideDeleteButton;
 					scope.piracy 	 	 = 	(conf.piracy 		!= undefined) ? conf.piracy 	 	: 	(scope.piracy 		!= undefined) 	?  scope.piracy		: 	ngImageGalleryOpts.piracy;
 				});
 
 				scope.onOpen 	 	 = 	(scope.onOpen 		!= undefined) ? scope.onOpen 	 : 	angular.noop;
 				scope.onClose 	 	 = 	(scope.onClose 		!= undefined) ? scope.onClose 	 : 	angular.noop;
+				scope.onDelete 	 	 = 	(scope.onDelete 		!= undefined) ? scope.onDelete 	 : 	angular.noop;
 				
 				// If images populate dynamically, reset gallery
 				var imagesFirstWatch = true;
@@ -310,6 +318,19 @@
 						scope.onClose();
 						scope.activeImageIndex = 0; // Reset index
 					}, 300);
+				}
+
+				// Delete image
+				scope.methods.delete = function(){
+					scope.onDelete().then(function() {
+						// Set the new index and image object
+						if (scope.activeImageIndex != 0) {
+							scope.images.splice(activeImageIndex, 1);
+							scope.activeImageIndex = activeImageIndex - 1;
+						} else {
+							scope.images.splice(activeImageIndex, 1);
+						}
+					});
 				}
 
 				// Change image to next
