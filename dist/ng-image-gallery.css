@@ -188,8 +188,8 @@
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .delete {
           position: relative;
           display: inline-block;
-          width: 40px;
-          height: 40px;
+          width: 35px;
+          height: 35px;
           overflow: hidden;
           cursor: pointer;
           text-decoration: none;
@@ -233,8 +233,8 @@
         position: absolute;
         top: 50%;
         margin-top: -25px;
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         overflow: hidden;
@@ -249,10 +249,10 @@
             width: 30px;
             height: 30px; } }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .prev {
-        left: 0px;
+        left: -5px;
         background-image: url(../res/icons/prev.svg); }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .next {
-        right: 0px;
+        right: -5px;
         background-image: url(../res/icons/next.svg); }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria {
         position: absolute;
