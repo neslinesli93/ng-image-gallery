@@ -429,13 +429,6 @@
 							scope.methods.next();
 						});
 					});
-					hammerElem.on('doubletap', function(ev){
-						if(scope.inline) return;
-
-						$timeout(function(){
-							scope.methods.close();
-						});
-					});
 				};
 
 
