@@ -112,7 +112,7 @@
 
 										// Description container
 										'<div class="galleria-bubbles" ng-if="activeImg.title">'+
-											'<span class="galleria-description">{{activeImg.title || "Lorem Ipsum Dolor Sit Amet"}}</span>'+
+											'<span class="galleria-description">{{activeImg.title}}</span>'+
 										'</div>'+
 
 										// Bubble navigation container
