@@ -139,7 +139,7 @@
       margin-bottom: 5px; }
   .ng-image-gallery .ng-image-gallery-modal {
     position: fixed;
-    z-index: 5000;
+    z-index: 40;
     top: 0;
     right: 0;
     bottom: 0;
