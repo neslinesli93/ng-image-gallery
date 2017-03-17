@@ -192,6 +192,7 @@
 					// Load image
 					scope.loadImg(imgObj).then(function(imgObj){
 						scope.activeImg = imgObj;
+						scope.activeImageIndex = scope.images.indexOf(imgObj);
 					});
 				}
 
