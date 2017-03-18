@@ -373,7 +373,8 @@
 						'delete',
 						'next',
 						'prev',
-						'galleria-bubble'
+						'galleria-bubble',
+						'galleria-description'
 					];
 
 					// check if clicked element has a class that

@@ -488,7 +488,12 @@
               .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span:not(.img-bubble):not(.galleria-description).active {
                 background-color: #fff; }
             .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span.galleria-description {
-              color: rgba(255, 255, 255, 0.5); }
+              color: rgba(255, 255, 255, 0.5);
+              cursor: auto;
+              -webkit-user-select: initial;
+                 -moz-user-select: initial;
+                  -ms-user-select: initial;
+                      user-select: initial; }
             .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria .galleria-bubbles span.img-bubble {
               box-sizing: border-box;
               width: 12px;
