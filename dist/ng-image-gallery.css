@@ -221,13 +221,13 @@
             background-repeat: no-repeat; }
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .ext-url:before,
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .ext-url:before {
-          background-image: url(../res/icons/external-link.svg); }
+          background-image: url(assets/images/galleria/external-link.svg); }
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .close:before,
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .close:before {
-          background-image: url(../res/icons/close.svg); }
+          background-image: url(assets/images/galleria/close.svg); }
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-right .delete:before,
         .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .destroy-icons-container-left .delete:before {
-          background-image: url(../res/icons/delete.svg); }
+          background-image: url(assets/images/galleria/delete.svg); }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .prev,
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .next {
         position: absolute;
@@ -250,10 +250,10 @@
             height: 30px; } }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .prev {
         left: -5px;
-        background-image: url(../res/icons/prev.svg); }
+        background-image: url(assets/images/galleria/prev.svg); }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .next {
         right: -5px;
-        background-image: url(../res/icons/next.svg); }
+        background-image: url(assets/images/galleria/next.svg); }
       .ng-image-gallery .ng-image-gallery-modal .ng-image-gallery-content .galleria {
         position: absolute;
         top: 0;
