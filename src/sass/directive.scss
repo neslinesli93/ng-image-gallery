@@ -132,15 +132,15 @@
 				}
 
 				.ext-url:before{
-					background-image:url(assets/images/galleria/external-link.svg);
+					background-image:url(../assets/images/galleria/external-link.svg);
 				}
 
 				.close:before{
-					background-image:url(assets/images/galleria/close.svg);
+					background-image:url(../assets/images/galleria/close.svg);
 				}
 
 				.delete:before{
-					background-image:url(assets/images/galleria/delete.svg);
+					background-image:url(../assets/images/galleria/delete.svg);
 				}
 			}
 			
@@ -171,12 +171,12 @@
 
 			.prev{
 				left: -5px;
-				background-image:url(assets/images/galleria/prev.svg);
+				background-image:url(../assets/images/galleria/prev.svg);
 			}
 
 			.next{
 				right: -5px;
-				background-image:url(assets/images/galleria/next.svg);
+				background-image:url(../assets/images/galleria/next.svg);
 			}
 
 			.galleria{
@@ -534,7 +534,7 @@
 						margin:0;
 
 						&:before{
-							background-image:url(../res/icons/external-link-inline.svg);
+							background-image:url(../assets/images/galleria/external-link-inline.svg);
 						}
 					}
 
@@ -542,11 +542,11 @@
 				}
 
 				.prev{
-					background-image:url(../res/icons/prev-inline.svg);
+					background-image:url(../assets/images/galleria/prev-inline.svg);
 				}
 
 				.next{
-					background-image:url(../res/icons/next-inline.svg);
+					background-image:url(../assets/images/galleria/next-inline.svg);
 				}
 
 				.prev, .next{
