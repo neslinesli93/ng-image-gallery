@@ -108,8 +108,7 @@
 										// Delete button
 										'<div class="delete" ng-click="methods.delete();" ng-if="!hideDeleteButton"></div>'+
 										// Save as favourite button
-										'<div class="star-unselected" ng-click="methods.star();" ng-if="!hideStarButton && !activeImg.favourite"></div>'+
-										'<div class="star-selected" ng-click="methods.star();" ng-if="!hideStarButton && activeImg.favourite"></div>'+
+										'<div ng-click="methods.star();" ng-if="!hideStarButton" ng-class="{\'star-unselected\': !activeImg.favourite, \'star-selected\': activeImg.favourite}"></div>'+
 									'</div>'+
 
 
