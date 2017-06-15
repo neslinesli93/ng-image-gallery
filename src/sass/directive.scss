@@ -102,7 +102,9 @@
 
 				.ext-url,
 				.close,
-				.delete{
+				.delete,
+				.star-unselected,
+				.star-selected{
 					&:hover{
 						transition: background-color 0.3s ease-in-out;
 						background-color: rgba(255,255,255,0.1);
@@ -141,6 +143,14 @@
 
 				.delete:before{
 					background-image:url(../assets/images/galleria/delete.svg);
+				}
+
+				.star-unselected:before{
+					background-image:url(../assets/images/galleria/star_unselected.svg);
+				}
+
+				.star-selected:before{
+					background-image:url(../assets/images/galleria/star_selected.svg);
 				}
 			}
 			

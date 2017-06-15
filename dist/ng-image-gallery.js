@@ -20,6 +20,7 @@
 			bgClose     		:   false,
 			hideCloseButton :   false,
 			hideDeleteButton :   false,
+			hideStarButton :   true,
 			piracy					:   false,
 			imgAnim 				: 	'fadeup',
 		};
@@ -64,6 +65,7 @@
 				bgClose 		: 	'=?',		// true|false
 				hideCloseButton : 	'=?',		// true|false,
 				hideDeleteButton : 	'=?',		// true|false,
+				hideStarButton : 	'=?',		// true|false,
 				piracy			: 	'=?',		// true|false,
 				imgAnim 		: 	'@?',		// {name}
 
@@ -105,6 +107,9 @@
 									'<div class="destroy-icons-container-left">'+
 										// Delete button
 										'<div class="delete" ng-click="methods.delete();" ng-if="!hideDeleteButton"></div>'+
+										// Save as favourite button
+										'<div class="star-unselected" ng-click="methods.star();" ng-if="!hideStarButton && !activeImg.favourite"></div>'+
+										'<div class="star-selected" ng-click="methods.star();" ng-if="!hideStarButton && activeImg.favourite"></div>'+
 									'</div>'+
 
 
@@ -248,6 +253,7 @@
 					scope.imgAnim 	 	 = 	(conf.imgAnim 		!= undefined) ? conf.imgAnim 	 	: 	(scope.imgAnim 		!= undefined) 	?  scope.imgAnim		: 	ngImageGalleryOpts.imgAnim;
 					scope.hideCloseButton 	 	 = 	(conf.hideCloseButton 		!= undefined) ? conf.hideCloseButton 	 	: 	(scope.hideCloseButton 		!= undefined) 	?  scope.hideCloseButton		: 	ngImageGalleryOpts.hideCloseButton;
 					scope.hideDeleteButton 	 	 = 	(conf.hideDeleteButton 		!= undefined) ? conf.hideDeleteButton 	 	: 	(scope.hideDeleteButton 		!= undefined) 	?  scope.hideDeleteButton		: 	ngImageGalleryOpts.hideDeleteButton;
+          scope.hideStarButton     =  (conf.hideStarButton    != undefined) ? conf.hideStarButton     :   (scope.hideStarButton     != undefined)   ?  scope.hideStarButton   :   ngImageGalleryOpts.hideStarButton;
 					scope.piracy 	 	 = 	(conf.piracy 		!= undefined) ? conf.piracy 	 	: 	(scope.piracy 		!= undefined) 	?  scope.piracy		: 	ngImageGalleryOpts.piracy;
 				});
 
@@ -338,6 +344,11 @@
 							
 						}
 					});
+				}
+
+				// Toggle image as favourite
+				scope.methods.star = function() {
+					scope.activeImg.favourite = !scope.activeImg.favourite;
 				}
 
 				// Change image to next
