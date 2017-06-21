@@ -133,10 +133,13 @@
     border-radius: 3px;
     background-size: cover;
     background-position: center center;
-    cursor: pointer; }
+    cursor: pointer;
+    border: 5px solid white; }
     .ng-image-gallery .ng-image-gallery-thumbnails .thumb:not(:last-child) {
       margin-right: 5px;
       margin-bottom: 5px; }
+  .ng-image-gallery .ng-image-gallery-thumbnails .thumb-favourite {
+    border: 5px solid #ff8333 !important; }
   .ng-image-gallery .ng-image-gallery-modal {
     position: fixed;
     z-index: 40;

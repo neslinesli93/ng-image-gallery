@@ -28,11 +28,16 @@
 			background-size:cover;
 			background-position:center center;
 			cursor: pointer;
+			border: 5px solid white;
 
 			&:not(:last-child){
 				margin-right: 5px;
 				margin-bottom: 5px;
 			}
+		}
+
+		.thumb-favourite {
+			border: 5px solid rgb(255,131,51) !important;
 		}
 	}
 
